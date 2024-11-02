@@ -1,0 +1,11 @@
+.produto{
+    background-color: rgb(85, 85, 143);
+    align-items: center;
+    justify-items: center;
+    display: block;
+}
+.item{
+    align-items: center;
+    background-color: beige;
+
+}

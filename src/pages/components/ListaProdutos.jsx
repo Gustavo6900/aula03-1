@@ -1,4 +1,3 @@
-import 
 
 export default function Produtos({produtos}) {
     return(
@@ -9,7 +8,7 @@ export default function Produtos({produtos}) {
                     <h2>{produto.title}</h2>
                     <p>{produto.description}</p>
                     <p>Preço: {produto.price}</p>
-                    <img src={produto.image} alt={produto.title} width= />
+                    <img src={produto.image} alt={produto.title} />
                 </li>
             ))}
         </ul>

@@ -1,5 +1,6 @@
 	
 import { useEffect, useState } from "react";
+import styles from "./components/home.module.css"
 
 export default function Home(){
     const [lista, setLista ] = useState([])
@@ -15,16 +16,16 @@ export default function Home(){
             catch{
                 alert("erro")
             }
-            receberlistaprodutos()
         }
+        receberlistaprodutos()
         }, [])
         return(
            <>
            <h1>Lista Produtos</h1>
 
-           <ul> 
-            {produtos.map(produto =>(
-                <li key={produto.id}>
+           <ul className={styles.produto}> 
+            {lista.map(produto =>(
+                <li className={styles.item} key={produto.id}>
                     <h2>{produto.title}</h2>
                     <p>{produto.description}</p>
                     <p> Preço: {produto.prico}</p>
