@@ -14,13 +14,34 @@ export default function ListaProdutos() {
         catch{
             alert("erro")
         }
+
+
     }
     receberlistaprodutos()
     }, [])
+
+    const orderAz = () => {
+        const listaOrdenada = [...lista].sort((a,b) => a.title.localeCompare(b.title))
+        setLista(listaOrdenada)
+    }
+
+
+    const orderZa = () => {
+        const listaOrdenada = [...lista].sort((a,b) => b.title.localeCompare(a.title))
+        setLista(listaOrdenada)
+    }
+
     return(
      <div>
 
         <h1>Lista de Produtos </h1>
+
+        <button onClick={() => orderAz()}>Az</button>
+        <button onClick={() => orderZa()}>Za</button>
+
+ 
+        
+
        <>
     <ul >
         {lista.map(produto =>( 
